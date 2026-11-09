@@ -7,6 +7,9 @@ export interface ProfileData {
   phone: string;
   whatsapp: string;
   facebook: string;
+  avatar: string;
+  cprCardImage: string;
+  officeAddress: string;
   bio: string;
   aboutHighlights: string[];
   yearsExperience: string;
@@ -72,20 +75,23 @@ export interface ProjectItem {
 }
 
 export const INITIAL_PROFILE: ProfileData = {
-  name: "Azizul Islam Opi",
-  role: "Graphic Designer & Creative Professional",
-  tagline: "Shaping futuristic visual identities, precision print architecture, and award-winning creative media.",
+  name: "KM Azizul Islam",
+  role: "Graphic Designer & Executive Officer",
+  tagline: "Shaping prestigious visual identities, precision print architecture, and healthcare publication systems.",
   location: "Chattogram, Bangladesh",
+  officeAddress: "Moti Tower, Chawkbazar, Chittagong, Bangladesh",
   email: "kmazizulislam52@gmail.com",
-  phone: "+8801830641733",
+  phone: "01830641733",
   whatsapp: "+8801830641733",
   facebook: "https://www.facebook.com/km.azizul.islam.122576",
-  bio: "I am Azizul Islam Opi, a dedicated Graphic Designer and Creative Professional based in Chattogram, Bangladesh. With a deep passion for visual aesthetics, vector craftsmanship, and brand architecture, I bridge the gap between creative visual artistry and strategic communication. My multidisciplinary expertise spans high-end branding, commercial print production at Al Falah Computer and Printers, executive documentation at CPR Medical Academy, and precision data management at Bazar Bag Super Shop. I believe exceptional design should not merely look stunning—it must inspire action, convey authority, and leave an indelible impression.",
+  avatar: "/assets/aistudio/image_3b90e3ad.png",
+  cprCardImage: "/assets/aistudio/image_cf367862.png",
+  bio: "I am KM Azizul Islam (Azizul Islam Opi), Executive Officer of CPR Medical Academy and a dedicated Graphic Designer & Creative Professional based in Chittagong, Bangladesh. With extensive expertise in vector design, commercial prepress publishing, and institutional communication, I bridge the gap between creative visual artistry and strategic healthcare management. My multidisciplinary work spans leading corporate and healthcare publications at CPR Medical Academy, commercial offset printing at Al Falah Computer and Printers, and precision inventory databases at Bazar Bag Super Shop.",
   aboutHighlights: [
-    "Vector precision & brand architecture with Adobe Illustrator",
-    "Comprehensive commercial print preparation & color fidelity",
-    "High-speed data management, document structuring & executive decks",
-    "Futuristic 3D aesthetics, motion graphics & modern digital visuals"
+    "Executive leadership & publication management at CPR Medical Academy",
+    "Master vector design, brand architecture & Adobe Illustrator layouts",
+    "Commercial offset prepress calibration & zero-defect print production",
+    "Healthcare course curriculum literature & executive presentation decks"
   ],
   yearsExperience: "3+",
   projectsCompleted: "180+",
@@ -162,17 +168,17 @@ export const INITIAL_SKILLS: SkillItem[] = [
 export const INITIAL_EXPERIENCES: ExperienceItem[] = [
   {
     id: "cpr-medical",
-    role: "Executive",
+    role: "Executive Officer",
     company: "CPR Medical Academy",
     period: "01 September 2026 To Running",
-    location: "Chattogram, Bangladesh",
+    location: "Moti Tower, Chawkbazar, Chittagong, Bangladesh",
     current: true,
-    description: "Overseeing executive operations, institutional brand communications, academic medical publishing, and high-impact visual presentations for healthcare training programs.",
+    description: "Serving as Executive Officer of CPR Medical Academy (চট্টগ্রামে একমাত্র অফলাইন মেডিকেল পোস্ট গ্র্যাজুয়েশন ওরিয়েন্টেশন সেন্টার) at Moti Tower, Chawkbazar, Chittagong. Leading institutional brand communication, executive publications, course curriculum layouts, and clinical training graphics.",
     responsibilities: [
+      "Overseeing executive operations, brand identity, and official publications for Chittagong's premier medical post-graduation orientation center.",
       "Directing design and layout of official medical course guides, clinical curriculum sheets, and executive certificates.",
-      "Managing institutional digital presentations and academic outreach materials.",
-      "Collaborating with medical faculty to translate complex healthcare modules into lucid visual graphics.",
-      "Ensuring consistent executive identity across all internal and public academy publications."
+      "Managing institutional digital presentations, visiting cards, and academic orientation outreach materials.",
+      "Collaborating with senior medical faculty to translate complex clinical curricula into clear, publication-grade visual guides."
     ]
   },
   {
@@ -284,15 +290,15 @@ export const INITIAL_SERVICES: ServiceItem[] = [
 export const INITIAL_PROJECTS: ProjectItem[] = [
   {
     id: "cpr-academy-brand",
-    title: "CPR Medical Academy Identity System",
+    title: "CPR Medical Academy Identity & Orientation Suite",
     category: "Branding",
-    tagline: "Official institutional branding and clinical publication design.",
-    description: "A comprehensive brand identity architecture designed for CPR Medical Academy. Features an authoritative crest mark blending medical symbols with modern minimalism, standardized course curriculum typography, official gold foil certification diplomas, and academic presentation slides.",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1200&q=80",
+    tagline: "Official identity architecture and executive stationery for Chittagong's premier medical post-graduation orientation center.",
+    description: "Official identity and communication design system for CPR Medical Academy (চট্টগ্রামে একমাত্র অফলাইন মেডিকেল পোস্ট গ্র্যাজুয়েশন ওরিয়েন্টেশন সেন্টার, Moti Tower, Chawkbazar, Chittagong). Features custom vector stethoscope and pulse logomark, executive visiting cards, curriculum orientation booklets, and digital marketing banners.",
+    image: "/assets/aistudio/image_cf367862.png",
     tags: ["Adobe Illustrator", "Branding", "Medical Publication", "Print Design"],
     client: "CPR Medical Academy",
     year: "2026",
-    deliverables: ["Institutional Logo", "Curriculum Booklet", "Official Certificates", "Presentation Template"],
+    deliverables: ["Official Visiting Card", "Institutional Logo", "Curriculum Booklet", "Orientation Banners"],
     featured: true
   },
   {

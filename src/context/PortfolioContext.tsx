@@ -51,7 +51,14 @@ export const PortfolioProvider: React.FC<{ children: React.ReactNode }> = ({ chi
       const saved = localStorage.getItem(`${STORAGE_KEY_PREFIX}profile`);
       if (saved) {
         const parsed = JSON.parse(saved);
-        return { ...INITIAL_PROFILE, ...parsed, facebook: parsed.facebook || INITIAL_PROFILE.facebook };
+        return {
+          ...INITIAL_PROFILE,
+          ...parsed,
+          facebook: parsed.facebook || INITIAL_PROFILE.facebook,
+          avatar: INITIAL_PROFILE.avatar,
+          cprCardImage: INITIAL_PROFILE.cprCardImage,
+          officeAddress: parsed.officeAddress || INITIAL_PROFILE.officeAddress,
+        };
       }
       return INITIAL_PROFILE;
     } catch {
@@ -71,7 +78,11 @@ export const PortfolioProvider: React.FC<{ children: React.ReactNode }> = ({ chi
   const [experiences, setExperiences] = useState<ExperienceItem[]>(() => {
     try {
       const saved = localStorage.getItem(`${STORAGE_KEY_PREFIX}experiences`);
-      return saved ? JSON.parse(saved) : INITIAL_EXPERIENCES;
+      if (saved) {
+        const parsed: ExperienceItem[] = JSON.parse(saved);
+        return parsed.map(exp => (exp.id === 'cpr-medical' ? INITIAL_EXPERIENCES[0] : exp));
+      }
+      return INITIAL_EXPERIENCES;
     } catch {
       return INITIAL_EXPERIENCES;
     }
@@ -98,7 +109,11 @@ export const PortfolioProvider: React.FC<{ children: React.ReactNode }> = ({ chi
   const [projects, setProjects] = useState<ProjectItem[]>(() => {
     try {
       const saved = localStorage.getItem(`${STORAGE_KEY_PREFIX}projects`);
-      return saved ? JSON.parse(saved) : INITIAL_PROJECTS;
+      if (saved) {
+        const parsed: ProjectItem[] = JSON.parse(saved);
+        return parsed.map(p => (p.id === 'cpr-academy-brand' ? INITIAL_PROJECTS[0] : p));
+      }
+      return INITIAL_PROJECTS;
     } catch {
       return INITIAL_PROJECTS;
     }

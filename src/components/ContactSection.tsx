@@ -190,9 +190,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialServiceOr
                 <div className="p-4 rounded-xl bg-[#111622] border border-white/5 flex items-center gap-3">
                   <MapPin size={16} className="text-cyan-400 shrink-0" />
                   <div>
-                    <div className="text-[11px] font-sans-ui text-slate-400">Location</div>
+                    <div className="text-[11px] font-sans-ui text-slate-400">Office &amp; Studio Location</div>
                     <div className="text-xs sm:text-sm font-serif text-white">
-                      {profile.location}
+                      {profile.officeAddress}
                     </div>
                   </div>
                 </div>

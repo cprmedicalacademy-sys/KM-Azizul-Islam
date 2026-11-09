@@ -26,6 +26,19 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Left Column: Authentic Human Editorial Typography in Times New Roman */}
           <div className="lg:col-span-6 flex flex-col justify-center space-y-6">
+            {/* Practitioner Signature Badge with Real Photo */}
+            <div className="flex items-center gap-3.5 p-2 rounded-xl bg-[#0c1017] border border-white/10 w-fit">
+              <img
+                src={profile.avatar}
+                alt={profile.name}
+                className="w-11 h-12 rounded-lg object-cover object-top border border-white/15"
+              />
+              <div className="pr-3">
+                <div className="font-serif font-bold text-xs text-white">KM Azizul Islam (Opi)</div>
+                <div className="text-[11px] font-serif italic text-cyan-300">Executive Officer · CPR Medical Academy</div>
+              </div>
+            </div>
+
             <div className="space-y-3">
               <h1 className="text-5xl sm:text-7xl xl:text-8xl font-serif font-bold text-white tracking-normal leading-[0.98]">
                 Azizul <br />
@@ -87,7 +100,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
             <div className="p-4 rounded-xl bg-[#0c1017] border border-white/10 flex items-start gap-3">
               <div className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 shrink-0" />
               <div className="text-xs font-serif leading-relaxed text-slate-300">
-                <span className="font-bold text-white">Current Engagement:</span> Executive of CPR Medical Academy (01 September 2026 To Running) — Overseeing brand communications, healthcare curriculum publications, and executive visual materials.
+                <span className="font-bold text-white">Current Engagement:</span> Executive Officer at CPR Medical Academy (01 September 2026 To Running) · Moti Tower, Chawkbazar, Chittagong. Overseeing brand communications, orientation curricula, and executive publications.
               </div>
             </div>
           </div>

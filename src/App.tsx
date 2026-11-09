@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { PortfolioProvider, usePortfolio } from './context/PortfolioContext';
 import { ThreeBackground } from './components/ThreeBackground';
+import { FireworkSparksEffect } from './components/FireworkSparksEffect';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
 import { AboutSection } from './components/AboutSection';
@@ -33,6 +34,9 @@ const MainPortfolioApp: React.FC = () => {
     <div className="relative min-h-screen bg-[#07090e] text-slate-100 selection:bg-cyan-400 selection:text-slate-950">
       {/* 3D Ambient Particle Background */}
       <ThreeBackground />
+
+      {/* Interactive Firework Sparks (আতশবাজি ও আগুনের স্ফুলিঙ্গ) */}
+      <FireworkSparksEffect />
 
       {/* Floating System Notification Toast */}
       {notification && (

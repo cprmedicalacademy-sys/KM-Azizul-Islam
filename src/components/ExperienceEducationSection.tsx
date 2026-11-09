@@ -100,6 +100,21 @@ export const ExperienceEducationSection: React.FC = () => {
                         </div>
                       ))}
                     </div>
+
+                    {exp.id === 'cpr-medical' && (
+                      <div className="pt-3 border-t border-white/10 space-y-2">
+                        <div className="text-[11px] font-serif italic text-slate-400">
+                          Official Institutional Visiting Card &amp; Orientation Banner:
+                        </div>
+                        <div className="rounded-xl overflow-hidden border border-white/15 bg-slate-900 shadow-md">
+                          <img
+                            src="/assets/aistudio/image_cf367862.png"
+                            alt="CPR Medical Academy Executive Credential"
+                            className="w-full h-auto object-cover hover:scale-102 transition-transform duration-300"
+                          />
+                        </div>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>

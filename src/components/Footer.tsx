@@ -55,7 +55,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
               <div>Email: <a href={`mailto:${profile.email}`} className="text-white hover:text-cyan-300 transition-colors">{profile.email}</a></div>
               <div>Phone / WhatsApp: <a href={`tel:${profile.phone}`} className="text-white hover:text-cyan-300 transition-colors font-mono-numbers">{profile.phone}</a></div>
               <div>Facebook: <a href={profile.facebook} target="_blank" rel="noopener noreferrer" className="text-white hover:text-cyan-300 transition-colors">km.azizul.islam.122576</a></div>
-              <div>Location: {profile.location}</div>
+              <div>Office: {profile.officeAddress}</div>
             </div>
 
             <div className="pt-3">

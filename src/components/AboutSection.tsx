@@ -24,18 +24,27 @@ export const AboutSection: React.FC = () => {
           {/* Left Column: Monograph Portrait & Studio Credential */}
           <div className="lg:col-span-5 space-y-6">
             <div className="p-8 rounded-2xl bg-[#0c1017] border border-white/10 space-y-6">
-              <div className="border-b border-white/10 pb-6">
-                <span className="font-serif italic text-xs text-slate-400 block mb-1">
-                  Practitioner Profile
-                </span>
-                <h3 className="font-serif text-2xl font-bold text-white">
-                  Azizul Islam Opi
-                </h3>
-                <div className="text-sm font-serif italic text-cyan-300 mt-1">
-                  Graphic Designer &amp; Creative Professional
+              <div className="border-b border-white/10 pb-6 flex items-center gap-4">
+                <div className="w-20 h-24 sm:w-24 sm:h-28 rounded-xl overflow-hidden border border-white/15 bg-slate-900 shrink-0 shadow-lg">
+                  <img
+                    src={profile.avatar}
+                    alt={profile.name}
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
-                <div className="text-xs font-sans-ui text-slate-400 mt-1">
-                  {profile.location}
+                <div>
+                  <span className="font-serif italic text-xs text-slate-400 block mb-0.5">
+                    Practitioner Profile
+                  </span>
+                  <h3 className="font-serif text-2xl font-bold text-white">
+                    KM Azizul Islam
+                  </h3>
+                  <div className="text-xs sm:text-sm font-serif italic text-cyan-300 mt-0.5">
+                    Executive Officer &amp; Designer
+                  </div>
+                  <div className="text-xs font-sans-ui text-slate-400 mt-1">
+                    {profile.officeAddress}
+                  </div>
                 </div>
               </div>
 
@@ -107,12 +116,26 @@ export const AboutSection: React.FC = () => {
                 </p>
 
                 <p>
-                  Currently, I serve as <span className="text-white font-semibold">Executive of CPR Medical Academy</span> (commencing 01 September 2026), where I oversee brand communications, official medical course guides, academic presentation decks, and executive documents.
+                  Currently, I serve as <span className="text-white font-semibold">Executive Officer of CPR Medical Academy</span> (commencing 01 September 2026), based at Moti Tower, Chawkbazar, Chittagong. I direct brand communications, medical post-graduation orientation literature, and institutional publications.
                 </p>
               </div>
 
-              {/* Core Strengths Checklist (Clean Typography, No Badges) */}
-              <div className="pt-6 border-t border-white/10">
+              {/* Official Credential / Visiting Card Feature */}
+              <div className="pt-4 border-t border-white/10 space-y-2">
+                <div className="text-xs font-serif italic text-slate-400">
+                  Official Institutional Credential · CPR Medical Academy
+                </div>
+                <div className="rounded-xl overflow-hidden border border-white/15 bg-slate-900 shadow-xl group">
+                  <img
+                    src={profile.cprCardImage}
+                    alt="KM Azizul Islam - Executive Officer, CPR Medical Academy"
+                    className="w-full h-auto object-cover group-hover:scale-101 transition-transform duration-300"
+                  />
+                </div>
+              </div>
+
+              {/* Core Strengths Checklist */}
+              <div className="pt-4 border-t border-white/10">
                 <div className="text-xs font-serif italic text-slate-400 uppercase tracking-normal mb-3">
                   Disciplines in Active Practice:
                 </div>
