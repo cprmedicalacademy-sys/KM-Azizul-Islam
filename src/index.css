@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-dark: #07090e;
+    --bg-surface: #0e121a;
+    --bg-surface-elevated: #141a24;
+    --border-hairline: rgba(255, 255, 255, 0.09);
+    --accent-blue: #38bdf8;
+    --accent-gold: #e2b170;
+  }
+
+  body {
+    background-color: #07090e;
+    color: #e5e7eb;
+    font-family: 'Times New Roman', Times, 'Tiempos', Georgia, serif;
+    letter-spacing: normal;
+    overflow-x: hidden;
+  }
+
+  /* Times New Roman as primary editorial display & heading face */
+  h1, h2, h3, h4, .font-serif, .font-display {
+    font-family: 'Times New Roman', Times, 'Georgia', serif;
+    letter-spacing: normal;
+  }
+
+  .font-sans-ui {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  .font-mono-numbers {
+    font-family: 'Space Grotesk', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Bespoke Editorial Gallery Surfaces (Zero AI Slop) */
+.editorial-card {
+  background-color: #0d1119;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.editorial-card:hover {
+  border-color: rgba(56, 189, 248, 0.3);
+  background-color: #111622;
+}
+
+.editorial-hairline {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.editorial-accent-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.2s ease;
+}
+
+.editorial-accent-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s ease;
+}
+
+.editorial-accent-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #07090e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e2638;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2b364e;
+}
